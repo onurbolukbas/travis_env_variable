@@ -15,7 +15,7 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t tagim .
+  - docker build -t tagim --build-arg FavoriteCountry=${FavoriteCountry} .
   - docker tag tagim onurbolukbas/docker101tutorial:latest
 
 after_success:

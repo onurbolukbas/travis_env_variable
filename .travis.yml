@@ -15,9 +15,9 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t travisScott .
-  - docker tag travisScott onurbolukbas/travisScott:latest
+  - docker build -t tagim .
+  - docker tag tagim onurbolukbas/docker101tutorial:latest
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push onurbolukbas/travisScott
+  - docker push onurbolukbas/docker101tutorial

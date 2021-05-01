@@ -4,8 +4,9 @@ function sleep(ms) {
 }
 
 async function main() {
-  while(true) {
-    console.log("Microservices rock!");
+  while (true) {
+    const country = process.env.FavoriteCountry;
+    console.log(`My favorite country is ${country}`);
     await sleep(5000);
   }
 }
